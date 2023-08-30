@@ -37,7 +37,7 @@
     "declaration": true, // Generate corresponding .d.ts files
     "outDir": "dist", // Output directory for compiled files
     "sourceMap": true, // Generate source maps for compiled files
-    "moduleResolution": "node" // Specify module resolution strategy
+    "moduleResolution": "node", // Specify module resolution strategy
   },
   "include": ["src/**/*"], // List of files to include in compilation
   "exclude": ["node_modules", "**/*.spec.ts"] // List of files to exclude from compilation

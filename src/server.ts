@@ -1,11 +1,9 @@
-import { log, logHttp } from './logging.js';
+import { checkENV } from './env.server.js';
 import dotenv from 'dotenv';
 import express from 'express';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import statusMonitor from 'express-status-monitor';
-import { checkENV } from './env.server';
-
 
 checkENV();
 
@@ -55,22 +53,10 @@ app.use(
   limiter,
 );
 
-const dynamicRoutes = ['/kiki', '/kuku', '/koko'];
-
-app.use((req, res, next) => {
-  if (dynamicRoutes.includes(req.path)) {
-    logHttp(req, res);
-    log.info('This is a test!');
-    res.status(200).send('Hello world! This is a test!');
-  } else {
-    next();
-  }
-});
-
 app.get('/', (req, res) => {
   res.send('Hello world! This is a test!');
 });
 
 app.listen(SERVER_PORT, () => {
-  console.log('Server is listening on http://localhost:' + SERVER_PORT);
+  console.log(`Server listening on port ${SERVER_PORT}, visit http://localhost:${SERVER_PORT}, press Ctrl+C to stop.`);
 });
