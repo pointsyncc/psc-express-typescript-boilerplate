@@ -1,0 +1,17 @@
+# Ignore artifacts:
+build
+coverage
+public
+.gitignore
+
+# Dependencies:
+node_modules
+
+# Logs:
+logs
+
+# Next.js build output:
+.next
+
+#lock files
+pnpm-lock.yaml

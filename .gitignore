@@ -1,0 +1,12 @@
+#ignore node modules
+
+node_modules
+
+#all variations of the .env file exclude .env.example
+
+.env
+
+# local env files
+.env*.local
+
+dist
