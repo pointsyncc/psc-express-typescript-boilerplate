@@ -1,14 +1,13 @@
-//import env.server.ts file
-
-import './env.server.js';
-
 import { log, logHttp } from './logging.js';
-
 import dotenv from 'dotenv';
 import express from 'express';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import statusMonitor from 'express-status-monitor';
+import { checkENV } from './env.server';
+
+
+checkENV();
 
 dotenv.config();
 

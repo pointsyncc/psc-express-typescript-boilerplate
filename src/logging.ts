@@ -5,8 +5,6 @@ export const logHttp = pinoHTTP();
 
 export const logPath = process.env.LOG_PATH || './logs/app.log';
 
-timestamp: () => `,"time":"${new Date(Date.now()).toISOString()}"`;
-
 const options = pino.transport({
   targets: [
     {
