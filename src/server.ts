@@ -58,5 +58,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(SERVER_PORT, () => {
-  console.log(`Server listening on port ${SERVER_PORT}, visit http://localhost:${SERVER_PORT}, press Ctrl+C to stop.`);
+  console.log(
+    `Server listening on port ${SERVER_PORT}, visit http://localhost:${SERVER_PORT}, press Ctrl+C to stop.`,
+  );
 });
